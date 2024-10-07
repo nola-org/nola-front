@@ -16,7 +16,7 @@ root.render(
   <Provider store={store}>
     <Context>
       <div className="container bg-white dark:bg-black dark:text-white">
-        <BrowserRouter basename="/NOLA">
+        <BrowserRouter basename="/nola-front">
           <PersistGate loading={null} persistor={persistor}>
           <GoogleOAuthProvider clientId="816846792743-3cmg8t2bhfvr19bvu60r65slnrjon8ko.apps.googleusercontent.com">
             <App />

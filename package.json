@@ -1,7 +1,7 @@
 {
   "name": "nola",
   "version": "0.1.0",
-  "homepage": "https://Dmitriy-Bogancov.github.io/NOLA/",
+  "homepage": "https://nola-org.github.io/nola-front/",
   "private": true,
   "dependencies": {
     "@cloudinary/react": "^1.13.0",
