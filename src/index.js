@@ -18,8 +18,8 @@ root.render(
       <div className="container bg-white dark:bg-black dark:text-white">
         <BrowserRouter basename="/nola-front">
           <PersistGate loading={null} persistor={persistor}>
-          <GoogleOAuthProvider clientId="816846792743-3cmg8t2bhfvr19bvu60r65slnrjon8ko.apps.googleusercontent.com">
-            <App />
+            <GoogleOAuthProvider clientId="276809120280-phkthdt9ggdfm3aqbtudsum4isdpes7v.apps.googleusercontent.com">
+              <App />
             </GoogleOAuthProvider>
           </PersistGate>
         </BrowserRouter>
