@@ -64,7 +64,7 @@ const SettingPage = () => {
         // onClick={handleSettingButton}
       >
         <GoBackButton
-          to=""
+          to="/main/accountAdverticer"
           imgWidth="50px"
           imgHeight="50px"
           imgAlt="Go back"

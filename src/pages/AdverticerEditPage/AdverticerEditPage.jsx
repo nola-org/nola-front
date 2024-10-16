@@ -196,11 +196,12 @@ const AdverticerEditPage = () => {
   };
 
   const handlerBackBtn = () => {
-    if (account?.description?.length > 50 && account?.entityName?.length > 0) {
-      navigation("/main/accountAdverticer");
-    } else {
-      setIsModal((prev) => !prev);
-    }
+    // if (account?.description?.length > 50 && account?.entityName?.length > 0) {
+    //   navigation("/main/accountAdverticer");
+    // } else {
+    //   setIsModal((prev) => !prev);
+    // }
+    setIsModal((prev) => !prev);
   };
 
   const handlerContinue = () => {

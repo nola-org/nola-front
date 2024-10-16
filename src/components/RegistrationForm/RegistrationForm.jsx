@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { registerThunk } from "../../redux/auth/authThunk";
 import { Toastify } from "../../services/Toastify/Toastify";
 import error from "../../assets/icons/circle-exclamation-mark.svg";
+import { Modal } from "../Modal/Modal";
 
 const schema = yup.object().shape({
   email: yup
@@ -45,7 +46,7 @@ const schema = yup.object().shape({
 const RegistrationForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const [isModal, setIsModal] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -129,8 +130,9 @@ const RegistrationForm = () => {
 
         try {
           await dispatch(registerThunk(formData)).unwrap();
-          Toastify("Registration sucsessfull");
-          navigate("/main/accountAdverticer/adverticerEdit");
+          setIsModal(true);
+          // Toastify("Registration sucsessfull");
+          // navigate("/main/accountAdverticer/adverticerEdit");
         } catch (error) {
           ToastError(error);
         }
@@ -150,6 +152,10 @@ const RegistrationForm = () => {
         });
         setErrors(errorsMap);
       });
+  };
+
+  const handleToggleModal = () => {
+    setIsModal((prev) => !prev);
   };
 
   return (
@@ -297,6 +303,15 @@ const RegistrationForm = () => {
           />
         </div>
       </form>
+
+      {isModal && (
+        <Modal childrenEl="true" handleToggleModal={handleToggleModal}>
+          <p>
+            Registration is complete!
+            <br /> Check your e-mail
+          </p>
+        </Modal>
+      )}
     </>
   );
 };

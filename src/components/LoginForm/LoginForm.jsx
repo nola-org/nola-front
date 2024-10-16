@@ -106,7 +106,7 @@ const LoginForm = () => {
         try {
           await dispatch(loginThunk(formData)).unwrap();
           Toastify("SignIn sucsessfull");
-          navigate("/main/accountAdverticer");
+          navigate("/main/accountAdverticer/adverticerEdit");
         } catch (error) {
           ToastError(error);
         }
