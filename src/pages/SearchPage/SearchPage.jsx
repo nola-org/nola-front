@@ -21,12 +21,12 @@ const SearchPage = () => {
 
   const search = searchParams.get("search");
 
-  useEffect(() => {
-    const getData = (async () => {
-      const { data } = await getAllPostApi();
-      setData(data);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   const getData = (async () => {
+  //     const { data } = await getAllPostApi();
+  //     setData(data);
+  //   })();
+  // }, []);
 
   const handleBack = () => {
     navigate(-1);

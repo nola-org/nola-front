@@ -86,6 +86,7 @@ const ChangeEmailPage = lazy(() =>
 )
 const DraftsPage = lazy(() => import("./pages/DraftsPage/DraftsPage"));
 const EditDraftsPage = lazy(() => import("./pages/EditDraftsPage/EditDraftsPage"))
+const ConfirmEmailPage = lazy(() => import("./pages/ConfirmEmailPage/ConfirmEmailPage"));
 
 function App() {
   const dispatch = useDispatch();
@@ -287,6 +288,10 @@ function App() {
                   redirectTo="/main/authorization"
                 />
               }
+            />
+            <Route
+              path="/confirm-email"
+              element={<ConfirmEmailPage />}
             />
           </Routes>
         </Suspense>
