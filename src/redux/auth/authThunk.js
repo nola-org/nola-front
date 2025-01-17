@@ -30,7 +30,7 @@ export const registerThunk = createAsyncThunk(
       return data;
     } catch (error) {     
       return rejectWithValue(
-        error?.response?.data[0]?.description ||
+        error?.response?.data[0] ||
           error?.response?.data?.errors?.Password ||
           error?.response?.data?.errors?.email ||
           error?.response?.statusText ||
