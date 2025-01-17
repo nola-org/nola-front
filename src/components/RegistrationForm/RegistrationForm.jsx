@@ -40,7 +40,7 @@ const schema = yup.object().shape({
     .min(8, "Confirm Password must be at least 8 characters")
     .max(16, "The password must be no more than 16 characters.")
     .oneOf([yup.ref("password"), null], "Passwords must match"),
-  entityName: yup.string().required("Name is required"),
+  userName: yup.string().required("Name is required"),
 });
 
 const RegistrationForm = () => {
@@ -51,7 +51,7 @@ const RegistrationForm = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    entityName: "",
+    userName: "",
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -77,7 +77,7 @@ const RegistrationForm = () => {
       errors?.email?.length === 0 &&
       errors?.password?.length === 0 &&
       errors?.confirmPassword?.length === 0 &&
-      errors?.entityName?.length === 0
+      errors?.userName?.length === 0
     ) {
       setValidForm(true);
       return;
@@ -87,7 +87,7 @@ const RegistrationForm = () => {
   }, [
     errors?.confirmPassword?.length,
     errors?.email?.length,
-    errors?.entityName?.length,
+    errors?.userName?.length,
     errors?.password?.length,
     formData.confirmPassword,
     formData.password,
@@ -140,7 +140,7 @@ const RegistrationForm = () => {
           email: "",
           password: "",
           confirmPassword: "",
-          entityName: "",
+          userName: "",
         });
         setErrors({});
         setValidForm(false);
@@ -258,30 +258,30 @@ const RegistrationForm = () => {
         </div>
 
         <div className={css.inputContainer}>
-          {errors.entityName && (
-            <div className={css.errorText}>{errors.entityName}</div>
+          {errors.userName && (
+            <div className={css.errorText}>{errors.userName}</div>
           )}
           <input
             className={`${css.inputForm}  ${
-              errors?.entityName?.length === 0 ? css.active : ""
+              errors?.userName?.length === 0 ? css.active : ""
             }
               ${
-                errors?.entityName?.length > 0 ? css.errorPlaceholder : ""
+                errors?.userName?.length > 0 ? css.errorPlaceholder : ""
               }           
               dark:bg-black dark:border-white dark:text-white`}
             type="text"
-            name="entityName"
+            name="userName"
             placeholder="Name"
-            value={formData.entityName}
+            value={formData.userName}
             onChange={handleInputChange}
-            onBlur={() => handleBlur("entityName")}
+            onBlur={() => handleBlur("userName")}
             style={{
-              borderColor: getBorderColor("entityName"),
-              color: getBorderColor("entityName"),
+              borderColor: getBorderColor("userName"),
+              color: getBorderColor("userName"),
             }}
           />
 
-          {errors?.entityName?.length > 1 ? (
+          {errors?.userName?.length > 1 ? (
             <img src={error} alt="" className={css.img_error} />
           ) : (
             ""

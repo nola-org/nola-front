@@ -1,41 +1,63 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ToastError } from "../../services/ToastError/ToastError";
-import axios from "axios";
+import checked from "../../assets/icons/checked.svg";
+import registrationCheck from "../../assets/icons/registrationCheck.svg";
+import css from "./ConfirmEmailPage.module.css";
+import { instance } from "../../services/axios";
 
 const ConfirmEmailPage = () => {
-  const params = useParams();
+  const [searchParams] = useSearchParams();
   const [validUrl, setValidUrl] = useState(false);
 
   useEffect(() => {
     const verifyEmailUrl = (async () => {
       try {
-          const url = `http://nola.tryasp.net/api/accounts/confirm-email?userId=${params.userId}&token=${params.token}`;
-         const {data} = await axios.get(url)
-          setValidUrl(true);
-          
-        console.log("url", url);
-          console.log("params-1", params);
-          console.log('data', data);
-          
+        // https://nola.tryasp.net/api/accounts....
+        const { data } = await instance.get(
+          `/accounts/confirm-email?userId=${searchParams.get(
+            "userId"
+          )}&token=${searchParams.get("token")}`
+        );
+        setValidUrl(true);
       } catch (error) {
         console.log(error);
         ToastError(error?.message);
         setValidUrl(false);
       }
-      console.log("params-2", params);
     })();
-  }, [params]);
+  }, [searchParams]);
   return (
     <>
       <div>ConfirmEmailPage</div>
       {validUrl ? (
-        <Link to="/main/authorization">Login</Link>
+        <div className={css.container}>
+          <img src={checked} alt="checked" />
+          <p className={`${css.title} dark:text-white`}>
+            Email confirmed successfully!
+          </p>
+          <Link to="/main/authorization" className={css.link}>
+            Login
+          </Link>
+        </div>
       ) : (
-        <h1>404 Not found</h1>
+        <div className={css.container}>
+          <img src={registrationCheck} alt="registrationCheck" />
+          <h1 className={`${css.title} dark:text-white`}>Error! Try again</h1>
+          <Link to="/main/authorization/registration" className={css.link}>
+            Registration
+          </Link>
+        </div>
       )}
     </>
   );
 };
 
 export default ConfirmEmailPage;
+// lorejiv995@fanicle.com
+// 11111Aa#
+// inna3
+// email: 'parkorispo@gufum.com', password: '111111Qq#', confirmPassword: '111111Qq#', userName: 'inna4'
+
+// 66a42fc467@emailawb.pro
+// 111111Ww#
