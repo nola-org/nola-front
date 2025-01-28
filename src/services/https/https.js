@@ -16,19 +16,19 @@ export const postlogOut = async () => {
 
 // ----------Account---------
 export const getAccountApi = async () => {
-  const data = await instance.get("/accounts");
+  const data = await instance.get("/accounts/get-profile");
   return data;
 };
 
 // =======
-export const postAccoutApi = async (body) => {
-  const { data } = await instance.put(`/accounts`, body);
-  return data;
-};
+// export const postAccoutApi = async (body) => {
+//   const { data } = await instance.put(`/accounts`, body);
+//   return data;
+// };
 
 export const putAccoutApi = async ({ ...body }) => {
   console.log(body);
-  const { data } = await instance.put(`/accounts`, body);
+  const { data } = await instance.put(`/accounts/update-profile`, body);
   return data;
 };
 // =======
