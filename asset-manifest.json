@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nola-front/static/css/main.e94612cc.css",
-    "main.js": "/nola-front/static/js/main.73c99ff9.js",
+    "main.js": "/nola-front/static/js/main.3e3642ff.js",
     "static/css/578.37b1ae14.chunk.css": "/nola-front/static/css/578.37b1ae14.chunk.css",
     "static/js/578.c0df225d.chunk.js": "/nola-front/static/js/578.c0df225d.chunk.js",
     "static/css/244.914904af.chunk.css": "/nola-front/static/css/244.914904af.chunk.css",
@@ -75,8 +75,8 @@
     "static/js/110.6ecffaf0.chunk.js": "/nola-front/static/js/110.6ecffaf0.chunk.js",
     "static/css/428.14a3e632.chunk.css": "/nola-front/static/css/428.14a3e632.chunk.css",
     "static/js/428.644d0d9d.chunk.js": "/nola-front/static/js/428.644d0d9d.chunk.js",
-    "static/css/713.7f332708.chunk.css": "/nola-front/static/css/713.7f332708.chunk.css",
-    "static/js/713.b613819f.chunk.js": "/nola-front/static/js/713.b613819f.chunk.js",
+    "static/css/713.24404ccf.chunk.css": "/nola-front/static/css/713.24404ccf.chunk.css",
+    "static/js/713.89c1e44a.chunk.js": "/nola-front/static/js/713.89c1e44a.chunk.js",
     "static/js/942.e3077ef3.chunk.js": "/nola-front/static/js/942.e3077ef3.chunk.js",
     "static/js/899.a0933394.chunk.js": "/nola-front/static/js/899.a0933394.chunk.js",
     "static/js/302.6570597e.chunk.js": "/nola-front/static/js/302.6570597e.chunk.js",
@@ -141,7 +141,7 @@
     "static/media/setting_check.svg": "/nola-front/static/media/setting_check.57fa516623817cd522bb47c5d4c428f0.svg",
     "static/media/arrow-up.svg": "/nola-front/static/media/arrow-up.a73842b5bf3d3112696f5e5c11590f62.svg",
     "main.e94612cc.css.map": "/nola-front/static/css/main.e94612cc.css.map",
-    "main.73c99ff9.js.map": "/nola-front/static/js/main.73c99ff9.js.map",
+    "main.3e3642ff.js.map": "/nola-front/static/js/main.3e3642ff.js.map",
     "578.37b1ae14.chunk.css.map": "/nola-front/static/css/578.37b1ae14.chunk.css.map",
     "578.c0df225d.chunk.js.map": "/nola-front/static/js/578.c0df225d.chunk.js.map",
     "244.914904af.chunk.css.map": "/nola-front/static/css/244.914904af.chunk.css.map",
@@ -215,8 +215,8 @@
     "110.6ecffaf0.chunk.js.map": "/nola-front/static/js/110.6ecffaf0.chunk.js.map",
     "428.14a3e632.chunk.css.map": "/nola-front/static/css/428.14a3e632.chunk.css.map",
     "428.644d0d9d.chunk.js.map": "/nola-front/static/js/428.644d0d9d.chunk.js.map",
-    "713.7f332708.chunk.css.map": "/nola-front/static/css/713.7f332708.chunk.css.map",
-    "713.b613819f.chunk.js.map": "/nola-front/static/js/713.b613819f.chunk.js.map",
+    "713.24404ccf.chunk.css.map": "/nola-front/static/css/713.24404ccf.chunk.css.map",
+    "713.89c1e44a.chunk.js.map": "/nola-front/static/js/713.89c1e44a.chunk.js.map",
     "942.e3077ef3.chunk.js.map": "/nola-front/static/js/942.e3077ef3.chunk.js.map",
     "899.a0933394.chunk.js.map": "/nola-front/static/js/899.a0933394.chunk.js.map",
     "302.6570597e.chunk.js.map": "/nola-front/static/js/302.6570597e.chunk.js.map",
@@ -229,6 +229,6 @@
   },
   "entrypoints": [
     "static/css/main.e94612cc.css",
-    "static/js/main.73c99ff9.js"
+    "static/js/main.3e3642ff.js"
   ]
 }
