@@ -290,7 +290,7 @@ function App() {
               }
             />
             <Route
-              path="/api/accounts/confirm-email"
+              path="/main/confirm-email"
               element={<ConfirmEmailPage />}
             />
           </Routes>
